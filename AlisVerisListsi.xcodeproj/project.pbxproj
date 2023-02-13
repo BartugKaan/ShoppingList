@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81C5CDC4299A6DEC0085E18A /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C5CDC3299A6DEC0085E18A /* DetailsViewController.swift */; };
 		81E51C9B299913EC006F73A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E51C9A299913EC006F73A9 /* AppDelegate.swift */; };
 		81E51C9D299913EC006F73A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E51C9C299913EC006F73A9 /* SceneDelegate.swift */; };
 		81E51C9F299913EC006F73A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E51C9E299913EC006F73A9 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81C5CDC3299A6DEC0085E18A /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		81E51C97299913EC006F73A9 /* AlisVerisListsi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlisVerisListsi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E51C9A299913EC006F73A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81E51C9C299913EC006F73A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				81E51CA8299913ED006F73A9 /* LaunchScreen.storyboard */,
 				81E51CAB299913ED006F73A9 /* Info.plist */,
 				81E51CA3299913EC006F73A9 /* AlisVerisListsi.xcdatamodeld */,
+				81C5CDC3299A6DEC0085E18A /* DetailsViewController.swift */,
 			);
 			path = AlisVerisListsi;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				81E51C9B299913EC006F73A9 /* AppDelegate.swift in Sources */,
 				81E51CA5299913EC006F73A9 /* AlisVerisListsi.xcdatamodeld in Sources */,
 				81E51C9D299913EC006F73A9 /* SceneDelegate.swift in Sources */,
+				81C5CDC4299A6DEC0085E18A /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
