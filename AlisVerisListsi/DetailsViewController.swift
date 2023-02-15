@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var isimTextField: UITextField!
@@ -25,6 +26,27 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func kaydetButtonTiklandi(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let alisveris = NSEntityDescription.insertNewObject(forEntityName: "Alisveris", into: context)
+        
+        alisveris.setValue(isimTextField.text, forKey: "isim")
+        alisveris.setValue(urunTextField.text, forKey: "marka")
+        if let fiyat = Int(fiyatTextField.text!){
+            alisveris.setValue(fiyat, forKey: "fiyat")
+        }
+        alisveris.setValue(UUID(), forKey: "id")
+        let data = imageView.image!.jpegData(compressionQuality: 0.5)
+        alisveris.setValue(data, forKey: "gorsel")
+        
+        do{
+            try context.save()
+            print("Kayıt edildi")
+        }
+        catch{
+            print("Hata Var !")
+        }
     }
     
     @objc func klavyeyiKapat(){
