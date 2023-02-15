@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         
     }
 
-    @objc func eklemeButonuTiklandi(){
+    @objc private func eklemeButonuTiklandi(){
         performSegue(withIdentifier: "toDetailVC", sender: nil)
         
     }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailsViewController: UIViewController {
+class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var isimTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var fiyatTextField: UITextField!
@@ -18,6 +18,10 @@ class DetailsViewController: UIViewController {
 
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(klavyeyiKapat))
         view.addGestureRecognizer(gestureRecognizer)
+        
+        imageView.isUserInteractionEnabled = true
+        let imageGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(gorselSec))
+        imageView.addGestureRecognizer(imageGestureRecognizer)
     }
     
     @IBAction func kaydetButtonTiklandi(_ sender: Any) {
@@ -25,6 +29,20 @@ class DetailsViewController: UIViewController {
     
     @objc func klavyeyiKapat(){
         view.endEditing(true)
+        
+    }
+    
+    @objc func gorselSec(){
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = true
+        present(picker, animated: true, completion: nil)
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info:
+                               [UIImagePickerController.InfoKey : Any]) {
+        imageView.image = info[.originalImage] as? UIImage
+        self.dismiss(animated: true,completion: nil)
         
     }
     

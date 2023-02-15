@@ -48,28 +48,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BDy-Cj-g53">
-                                <rect key="frame" x="20" y="88" width="374" height="216"/>
-                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ürün ismi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E94-t0-hSL">
                                 <rect key="frame" x="20" y="338" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="47H-nz-gps"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ürün Fiyatı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fgb-bG-p34">
                                 <rect key="frame" x="20" y="395" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="lBk-jf-vuO"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ürünün Markası" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PZT-id-iId">
                                 <rect key="frame" x="20" y="455" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="MCg-Qk-Nqb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ClickForImage" translatesAutoresizingMaskIntoConstraints="NO" id="BDy-Cj-g53">
+                                <rect key="frame" x="20" y="88" width="374" height="216"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRV-GJ-Y0O">
-                                <rect key="frame" x="131" y="513" width="151" height="65"/>
+                                <rect key="frame" x="140" y="554" width="151" height="65"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="JmA-YM-dkg"/>
+                                    <constraint firstAttribute="height" constant="65" id="fcg-Z4-2tH"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Kaydet"/>
@@ -81,22 +90,22 @@
                         <viewLayoutGuide key="safeArea" id="AEc-nZ-Gpa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="E94-t0-hSL" firstAttribute="trailing" secondItem="Fgb-bG-p34" secondAttribute="trailing" id="6Ki-xl-oVB"/>
-                            <constraint firstItem="PZT-id-iId" firstAttribute="centerX" secondItem="xRV-GJ-Y0O" secondAttribute="centerX" id="7JQ-x7-3eU"/>
-                            <constraint firstItem="xRV-GJ-Y0O" firstAttribute="leading" secondItem="AEc-nZ-Gpa" secondAttribute="leading" constant="131" id="8mt-m3-qGS"/>
-                            <constraint firstItem="E94-t0-hSL" firstAttribute="top" secondItem="BDy-Cj-g53" secondAttribute="bottom" constant="34" id="9hv-Nk-cfa"/>
-                            <constraint firstItem="BDy-Cj-g53" firstAttribute="top" secondItem="AEc-nZ-Gpa" secondAttribute="top" id="9mF-cP-2Iq"/>
-                            <constraint firstItem="xRV-GJ-Y0O" firstAttribute="top" secondItem="PZT-id-iId" secondAttribute="bottom" constant="24" id="GPq-51-3Uv"/>
-                            <constraint firstItem="E94-t0-hSL" firstAttribute="leading" secondItem="Fgb-bG-p34" secondAttribute="leading" id="KVe-NU-7qa"/>
-                            <constraint firstItem="BDy-Cj-g53" firstAttribute="leading" secondItem="E94-t0-hSL" secondAttribute="leading" id="XV0-3u-6l8"/>
-                            <constraint firstItem="AEc-nZ-Gpa" firstAttribute="bottom" secondItem="xRV-GJ-Y0O" secondAttribute="bottom" constant="284" id="ZvW-No-50r"/>
-                            <constraint firstItem="BDy-Cj-g53" firstAttribute="trailing" secondItem="E94-t0-hSL" secondAttribute="trailing" id="ayA-i5-u07"/>
-                            <constraint firstItem="BDy-Cj-g53" firstAttribute="leading" secondItem="8K1-Nn-xH3" secondAttribute="leadingMargin" id="b1a-fJ-bQj"/>
-                            <constraint firstItem="BDy-Cj-g53" firstAttribute="trailing" secondItem="8K1-Nn-xH3" secondAttribute="trailingMargin" id="cUl-fs-MFk"/>
-                            <constraint firstItem="PZT-id-iId" firstAttribute="top" secondItem="Fgb-bG-p34" secondAttribute="bottom" constant="26" id="e5S-cc-a5Z"/>
-                            <constraint firstItem="Fgb-bG-p34" firstAttribute="leading" secondItem="PZT-id-iId" secondAttribute="leading" id="gh0-fE-V98"/>
-                            <constraint firstItem="Fgb-bG-p34" firstAttribute="trailing" secondItem="PZT-id-iId" secondAttribute="trailing" id="v14-Ak-Lyg"/>
-                            <constraint firstItem="Fgb-bG-p34" firstAttribute="top" secondItem="E94-t0-hSL" secondAttribute="bottom" constant="23" id="xz0-eV-mqt"/>
+                            <constraint firstItem="PZT-id-iId" firstAttribute="top" secondItem="Fgb-bG-p34" secondAttribute="bottom" constant="26" id="00J-td-FAu"/>
+                            <constraint firstItem="Fgb-bG-p34" firstAttribute="trailing" secondItem="PZT-id-iId" secondAttribute="trailing" id="3cA-7y-Bm1"/>
+                            <constraint firstItem="Fgb-bG-p34" firstAttribute="top" secondItem="E94-t0-hSL" secondAttribute="bottom" constant="23" id="3dl-UN-E4t"/>
+                            <constraint firstItem="BDy-Cj-g53" firstAttribute="trailing" secondItem="E94-t0-hSL" secondAttribute="trailing" id="41u-KG-MTG"/>
+                            <constraint firstItem="E94-t0-hSL" firstAttribute="trailing" secondItem="Fgb-bG-p34" secondAttribute="trailing" id="KlZ-uB-i3N"/>
+                            <constraint firstItem="xRV-GJ-Y0O" firstAttribute="leading" secondItem="AEc-nZ-Gpa" secondAttribute="leading" constant="140" id="LE8-7G-1Lv"/>
+                            <constraint firstItem="BDy-Cj-g53" firstAttribute="trailing" secondItem="8K1-Nn-xH3" secondAttribute="trailingMargin" id="LVN-dH-X7p"/>
+                            <constraint firstItem="BDy-Cj-g53" firstAttribute="leading" secondItem="E94-t0-hSL" secondAttribute="leading" id="Nqs-m9-0zB"/>
+                            <constraint firstItem="AEc-nZ-Gpa" firstAttribute="bottom" secondItem="xRV-GJ-Y0O" secondAttribute="bottom" constant="279" id="Rtv-EA-lfn"/>
+                            <constraint firstItem="E94-t0-hSL" firstAttribute="top" secondItem="BDy-Cj-g53" secondAttribute="bottom" constant="34" id="TCR-kK-tIc"/>
+                            <constraint firstItem="BDy-Cj-g53" firstAttribute="top" secondItem="AEc-nZ-Gpa" secondAttribute="top" id="YsL-rX-w6o"/>
+                            <constraint firstItem="E94-t0-hSL" firstAttribute="leading" secondItem="Fgb-bG-p34" secondAttribute="leading" id="Zp9-kl-SO4"/>
+                            <constraint firstItem="Fgb-bG-p34" firstAttribute="leading" secondItem="PZT-id-iId" secondAttribute="leading" id="g0c-Q8-Oa0"/>
+                            <constraint firstItem="BDy-Cj-g53" firstAttribute="leading" secondItem="8K1-Nn-xH3" secondAttribute="leadingMargin" id="p2E-OM-1Og"/>
+                            <constraint firstItem="PZT-id-iId" firstAttribute="centerX" secondItem="xRV-GJ-Y0O" secondAttribute="centerX" id="qdc-MZ-J54"/>
+                            <constraint firstItem="xRV-GJ-Y0O" firstAttribute="top" secondItem="PZT-id-iId" secondAttribute="bottom" constant="29" id="xdN-wN-Rag"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CeT-aE-V7m"/>
@@ -109,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcS-B9-yLD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1846" y="-27"/>
+            <point key="canvasLocation" x="1844.9275362318842" y="-27.455357142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sdw-ne-sPv">
@@ -131,6 +140,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ClickForImage" width="1080" height="1080"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
