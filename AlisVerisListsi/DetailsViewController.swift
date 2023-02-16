@@ -47,6 +47,8 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         catch{
             print("Hata Var !")
         }
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "veriGirildi"), object: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @objc func klavyeyiKapat(){
