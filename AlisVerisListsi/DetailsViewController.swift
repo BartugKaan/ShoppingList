@@ -24,7 +24,36 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         if secilenUrunIsmi != ""{
             
             if let uuidString = secilenUrunUUID?.uuidString{
-                print(uuidString)
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                let contex = appDelegate.persistentContainer.viewContext
+                
+                let fetchReques = NSFetchRequest<NSFetchRequestResult>(entityName: "Alisveris")
+                fetchReques.predicate = NSPredicate(format: "id = %@", uuidString)
+                fetchReques.returnsObjectsAsFaults = false
+                
+                do{
+                    let sonuclar = try contex.fetch(fetchReques)
+                    if sonuclar.count > 0{
+                        for sonuc in sonuclar as! [NSManagedObject]{
+                            if let isim = sonuc.value(forKey: "isim") as? String{
+                                isimTextField.text = isim
+                            }
+                            if let fiyat = sonuc.value(forKey: "fiyat") as? Int{
+                                fiyatTextField.text = String(fiyat)
+                            }
+                            if let marka = sonuc.value(forKey: "marka") as? String{
+                                urunTextField.text = marka
+                            }
+                            if let gorselData = sonuc.value(forKey: "gorsel") as? Data{
+                                let image = UIImage(data: gorselData)
+                                imageView.image = image
+                            }
+                        }
+                    }
+                }
+                catch{
+                    print("hata")
+                }
             }
             
         }

@@ -42,15 +42,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         do{
             let sonuclar = try context.fetch(fetchRequest)
-            for sonuc in sonuclar as! [NSManagedObject]{
-                if let isim = sonuc.value(forKey: "isim") as? String{
-                    isimDizisi.append(isim)
+            if sonuclar.count > 0{
+                for sonuc in sonuclar as! [NSManagedObject]{
+                    if let isim = sonuc.value(forKey: "isim") as? String{
+                        isimDizisi.append(isim)
+                    }
+                    if let id = sonuc.value(forKey: "id") as? UUID{
+                        idDizisi.append(id)
+                    }
                 }
-                if let id = sonuc.value(forKey: "id") as? UUID{
-                    idDizisi.append(id)
-                }
+                tableView.reloadData()
             }
-            tableView.reloadData()
         }
         catch{
             print("hata var")
