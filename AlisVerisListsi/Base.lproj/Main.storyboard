@@ -113,6 +113,7 @@
                         <outlet property="fiyatTextField" destination="Fgb-bG-p34" id="lba-hm-4Ql"/>
                         <outlet property="imageView" destination="BDy-Cj-g53" id="DGD-sZ-bNO"/>
                         <outlet property="isimTextField" destination="E94-t0-hSL" id="wG2-QA-Fzv"/>
+                        <outlet property="kaydetButton" destination="xRV-GJ-Y0O" id="8wc-nI-sVN"/>
                         <outlet property="urunTextField" destination="PZT-id-iId" id="kDT-Wh-tbo"/>
                     </connections>
                 </viewController>
